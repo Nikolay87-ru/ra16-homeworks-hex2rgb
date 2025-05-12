@@ -1,35 +1,38 @@
 .app {
-  background:rgb(52, 73, 94);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
   width: 100vw;
   margin: 0;
   padding: 0;
+}
+
+.form-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  width: 300px;
 }
 
-.input-hex {
+.hex-input, .rgb-display {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 16px;
   border: none;
+  outline: none;
+  box-sizing: border-box;
 }
 
-.form {
-  display: block;
-  padding: 1rem;
-
+.hex-input {
+  background-color: #f5f5f5;
+  border-radius: 4px;
 }
 
-.input {
-  background: #d1d1d1;
-  color: #333;
-}
-
-.rgb-color {
-  font-size: 2rem;
+.rgb-display {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-weight: bold;
   text-align: center;
-  margin-top: 1rem;
-  padding: 0.5rem;
-  background: rgba(0, 0, 0, 0.5); 
-  color: white;
   border-radius: 4px;
 }
