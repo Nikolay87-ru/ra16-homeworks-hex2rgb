@@ -9,41 +9,8 @@
   transition: background 0.3s ease;
 }
 
-.form-container {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  width: 300px;
-}
-
-.hex-input, .rgb-display {
-  width: 100%;
-  padding: 12px 16px;
-  font-size: 16px;
-  border: none;
-  outline: none;
-  box-sizing: border-box;
-}
-
-.hex-input {
-  background-color: #f5f5f5;
-  border: 2px solid #f5f5f5;
-  border-radius: 4px;
-
-  &:focus {
-    border: 2px solid rgb(94, 96, 202);
-    transition-duration: 0.3s;
-  }
-}
-
-.rgb-display {
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  font-weight: bold;
-  text-align: center;
-  border-radius: 4px;
-}
-
-.hex-input.error {
-  border: 2px solid #ff4d4d;
+.hex-input:focus {
+  border-color: rgb(94, 96, 202);
+  box-shadow: 0 0 0 0.2rem rgba(94, 96, 202, 0.25);
+  transition: all 0.3s ease;
 }

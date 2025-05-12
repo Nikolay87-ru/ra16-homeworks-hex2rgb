@@ -12,16 +12,18 @@ const HexInput: FC<HexInputProps> = ({ value, onChange, rgb }) => {
   };
 
   return (
-    <div className='form-container'>
+    <div className="d-flex flex-column gap-2" style={{ width: '300px' }}>
       <input
-        className='hex-input'
-        type='text'
-        placeholder='#RRGGBB'
+        className={`form-control ${rgb === 'Ошибка!' ? 'is-invalid' : ''}`}
+        type="text"
+        placeholder="#RRGGBB"
         maxLength={7}
         onChange={handleChange}
         value={value}
       />
-      <div className='rgb-display'>{rgb}</div>
+      <div className="bg-dark bg-opacity-50 text-white fw-bold text-center p-2 rounded">
+        {rgb}
+      </div>
     </div>
   );
 };
