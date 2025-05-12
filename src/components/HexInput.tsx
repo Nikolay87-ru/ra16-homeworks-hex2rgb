@@ -1,4 +1,4 @@
-import type { FC } from 'react';
+import type { FC, ChangeEvent } from 'react';
 
 interface HexInputProps {
   value: string;
@@ -7,23 +7,21 @@ interface HexInputProps {
 }
 
 const HexInput: FC<HexInputProps> = ({ value, onChange, rgb }) => {
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     onChange(e.target.value);
   };
 
   return (
-    <div className="form-container">
+    <div className='form-container'>
       <input
-        className="hex-input"
-        type="text"
-        placeholder="#RRGGBB"
+        className='hex-input'
+        type='text'
+        placeholder='#RRGGBB'
         maxLength={7}
         onChange={handleChange}
         value={value}
       />
-      <div className="rgb-display" >
-        {rgb}
-      </div>
+      <div className='rgb-display'>{rgb}</div>
     </div>
   );
 };
